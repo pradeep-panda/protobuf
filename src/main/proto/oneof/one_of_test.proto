@@ -1,0 +1,9 @@
+syntax = "proto3";
+package com.test.oneoft;
+message OneOfTest{
+    int32 id =1;
+    oneof content_type{
+        string json=2;
+        string protobf =3;
+    }
+}

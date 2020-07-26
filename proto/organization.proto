@@ -1,0 +1,5 @@
+syntax = "proto3";
+message Organization{
+    string org_name=1;
+    string org_address=2;
+}

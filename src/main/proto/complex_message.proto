@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+message ComplexMessage{
+    int32 age = 1;
+    string first_name = 2;
+    bytes picture = 3; // jpg file
+    bool is_verified= 4;
+    float height = 5;
+
+    repeated string phone_numbers = 6;
+
+    FavColor fav_color = 7;
+
+    message FavColor{
+        Color color =1;
+    }
+    enum Color{
+        UNKNOWN = 0;
+        RED =1;
+        GREEN = 2;
+    }
+    OuterMessage outer_message = 8;
+}
+
+message OuterMessage{
+    string content =1;
+    string format =2;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+package com.test.servicet;
+
+message PersonData{
+    string first_name =1;
+    string last_name = 2;
+}
+message PersonRequest{
+    PersonData person =1;
+}
+
+message PersonReponse{
+    string result = 1;
+}
+
+service PersonService{
+    rpc Search(PersonRequest) returns (PersonReponse){};
+}

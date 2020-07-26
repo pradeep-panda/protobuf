@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+import "organization.proto";
+message Person{
+    int32 age =1;
+    string first_name = 2;
+    string last_name = 3
+    bytes picture = 4; // jpg file
+    bool is_verified= 5;
+    float height = 6;
+
+    repeated string phone_numbers = 7; // 0 or more phone nos
+    enum Color{  // defind
+                 UNKNOWN_COLOR = 0;  // default value
+                 RED =1;
+                 GREEN=2;
+                 BLACK=3;
+    }
+
+    Color color = 8;  // Color declared here
+    Education education = 9
+
+    // can define as a nested message structure. defined in side Person
+    message Address{
+        string city =1;
+        string state = 2;
+    }
+
+    repeated Address addresses =10
+    Organization organization = 11;
+}
+
+message Education{
+    string qualification = 1;
+    string college_name = 2;
+}

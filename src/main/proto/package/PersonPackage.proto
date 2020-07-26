@@ -1,0 +1,14 @@
+syntax = "proto3";
+package com.test.pack;
+
+option java_outer_classname="PersonPackageTest";
+message PersonPackage{
+    int32 age =1;
+    string first_name = 2;
+    string last_name = 3;
+    bytes picture = 4; // jpg file
+    bool is_verified= 5;
+    float height = 6;
+
+    repeated string phone_numbers = 7;
+}

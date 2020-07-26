@@ -1,0 +1,7 @@
+syntax = "proto3";
+package com.test.impt;
+
+message AddressImport {
+   string city=1;
+   string address=2;
+}

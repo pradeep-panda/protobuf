@@ -1,0 +1,8 @@
+syntax = "proto3";
+package com.test.outer;
+
+option java_outer_classname="OuterTestClass";
+message OuterCls{
+    string fname = 1;
+    string cname = 2;
+}

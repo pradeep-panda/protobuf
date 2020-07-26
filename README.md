@@ -1,6 +1,6 @@
 # protobuf
 
-- Proto basic examples
+- Protobuf basic examples
 - Exampel to all different data types
     - Primitive
     - Non-primitive

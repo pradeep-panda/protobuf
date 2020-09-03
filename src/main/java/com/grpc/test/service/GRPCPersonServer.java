@@ -1,3 +1,5 @@
+package com.grpc.test.service;
+
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
@@ -13,7 +15,7 @@ public class GRPCPersonServer {
                 .build();
         server.start();
 
-        //  if we do not write it it will start servsser and end the program
+        //  if we do not write this , it will start server and immediately exit
 
         Runtime.getRuntime().addShutdownHook(new Thread(()->{
             System.out.println("shutdown huok");
